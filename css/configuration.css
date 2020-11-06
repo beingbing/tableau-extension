@@ -1,0 +1,275 @@
+html,
+body {
+    background: #FFFFFF;
+    overflow:hidden;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    height: 100%;
+}
+
+
+h1, h2, h3 {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    line-height: inherit !important;
+    font-size: 25px;
+}
+
+h4 {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    line-height: inherit !important;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+h5 {
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    line-height: inherit !important;
+    display: inline-block;
+    font-size: 13px;
+}
+
+
+.col-sm-10 {
+    padding-top: 10px;
+}
+
+.config-container {
+    background: #FFFFFF;
+    height: 100%;
+}
+
+.config-help-btn{
+    border:none;
+    display:inline-block;
+    vertical-align:top;
+    overflow:hidden;
+    text-decoration:none;
+    color:inherit;
+    background-color:inherit;
+    text-align:center;
+    cursor:pointer;
+    white-space:nowrap;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none
+}
+
+.logo-container{
+  padding-top: 3px;
+}
+
+.logo {
+    /* background-color: #ffffff; */
+    border-radius: 30%;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+
+img {
+    height: 62px;
+    width: 62px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.left {
+    height: auto;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.right p {
+    background: #FFFFFF;
+    margin: 0px;
+    padding-top: 10px;
+}
+.center {
+  text-align: center;
+}
+
+.header {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  display: block;
+
+}
+
+.title {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.step {
+    height:auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.list {
+    height: 100px;
+}
+
+.selector {
+    width: 96% !important;
+}
+
+.endpoint {
+    width: 96% !important;
+    word-break: break-word;
+}
+
+.circle {
+    background: #fff;
+    border-radius: 0.8em;
+    -moz-border-radius: 0.8em;
+    -webkit-border-radius: 0.8em;
+    color: #0D1143;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.7em;
+    line-height: 1.6em;
+    margin-right: 5px;
+    text-align: center;
+    width: 1.6em;
+}
+
+.done p {
+    color: #3F3E3E;
+    margin-top: 20px;
+}
+
+.done svg {
+    color: rgb(17, 226, 65) !important;
+    font-size: 2em;
+    margin: 5px 10px;
+}
+
+.clear svg {
+    color: #DD0404 !important;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.submit {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.footer {
+    height: calc(100% - 205px);
+}
+
+.config {
+    width: 20px;
+    padding: 2px;
+    color: darkgray;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    line-height:80px;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.btn-success {
+    background-color: #0096a4 !important;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-secondary{
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.btn-remove,.btn-add {
+    min-width: 55px;
+    width: 15%;
+    border: none;
+    padding: none;
+    margin-bottom: 2px;
+}
+
+.btn-remove {
+    color: #fff;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
+}
+.btn-add {
+    color: #fff;
+    background-color: #0096a4 !important;
+    border-color: #0096a4 !important;
+}
+
+.selector-columns {
+    width: 38% !important;
+    height: 100% !important;
+    margin-right: 5px;
+    margin-bottom: 0.5px;
+    margin-top: 0.5px;
+}
+
+.btn-circle {
+    background-color: rgba(0, 0, 0, 0.712) !important;
+    border: none;
+    color: white;
+    margin-left: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    /* margin: 4px 2px; */
+    border-radius: 50%;
+}
+
+.input-info {
+    display: inline-block;
+    max-width: 80%;
+    word-wrap : break-word;
+}
+
+.xform-container{
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-left: 15px;
+}
+
+#sortable { list-style-type: none; margin: 0; padding: 0; width: 100%; }
+
+li,
+.ui-state-highlight {
+    line-height: 18px;
+    height: 2.5em;
+    max-width: 100%;
+    background-color: #fff;
+}
+
+
+.ui-state-highlight{
+    display: block;
+    background-color: #999;
+}
+
+.configRadio2{
+    margin-left: 10px
+}

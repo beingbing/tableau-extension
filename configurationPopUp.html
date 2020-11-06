@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+  <title>Alarm confirm Configuration</title>
+  <!-- Jquery -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="../lib/tableau-extensions-1.latest.js"></script>
+  <script src="../js/XportConfigure.js"></script>
+  <link rel="stylesheet" href="../css/configuration.css">
+  <link rel="stylesheet" href="../css/xpand.css">
+</head>
+
+<body>
+  <!-- head -->
+  <div id="config-top" class="xp-top">
+    <div class="xp-bar xp-left-align bar-theme">
+        <div class="xp-bar-item xp-left xp-button">
+          <h2>Configuration</h2>
+        </div>
+    </div>
+  </div>
+  <!-- body -->
+  <div id="config-container" class="xform-container">
+    <div class="row step" id="divWorksheetSelector">
+      <div class="col-sm-12 right">
+        <h4>Worksheet</h4>
+        <h5>Select the Worksheet (that will be used in the extension to get data)</h5>
+        <form class="form-horizontal">
+          <div class="form-group form-inline">
+            <select class="form-control form-control-sm selector" id="wsheetselect">
+            </select>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- Footer -->
+  <div id= "config-bottom" class="xp-bottom xp-top-border">
+    <div class="footer left">
+      <button class="btn btn-success" type="button" id="submit" onclick="submit()" disabled>Submit</button>
+  </div>
+</body>
+
+</html>
