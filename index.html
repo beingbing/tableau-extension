@@ -24,6 +24,14 @@
     <script src="../js/Xport.js"></script>
     <script src="../js/utils/utils.js"></script>
     <script src="../js/utils/dev.js"></script>
+    <style>
+      .modal-backdrop.in {
+        opacity: 0;
+      }
+      .modal-content {
+        box-shadow: none;
+      }
+    </style>
   </head>
   <body>
 
@@ -47,7 +55,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header bar-theme">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" id="decoy">&times;</button>
             <h4 class="modal-title" id="choose_action_title">choose action to perform</h4>
           </div>
           <div class="modal-body d-flex justify-content-evenly">
@@ -84,8 +92,24 @@
             <button class="close" type="button" data-dismiss="modal">&times;</button>
             <h4 class="modal-title" id="xp-modal-title">Are you sure ?</h4>
           </div>
-          <div class="modal-body">
-            <button class="btn xp-btn-" type="button" id="open_post_btn">Post</button>
+          <div class="modal-body d-flex justify-content-evenly">
+            <button class="btn xp-btn-success" type="button" id="cancel_yes">Yes</button>
+            <button class="btn xp-btn-success" type="button" id="cancel_no" data-dismiss="modal">no</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="yn_ack" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header bar-theme">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title" id="xp-modal-title">Are you sure !?</h4>
+          </div>
+          <div class="modal-body d-flex justify-content-evenly">
+            <button class="btn xp-btn-success" type="button" id="ack_yes">Yes</button>
+            <button class="btn xp-btn-success" type="button" id="ack_no" data-dismiss="modal">no</button>
           </div>
         </div>
       </div>

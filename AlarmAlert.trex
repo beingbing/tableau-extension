@@ -7,7 +7,7 @@
     <author name="Your Name" email="you@email.com" organization="Your Company" website="https://www.yourwebsite.com"/>
     <min-api-version>0.9</min-api-version>
     <source-location>
-      <url>http://localhost:8080</url>
+      <url>http://localhost:8081</url>
     </source-location>
     <icon></icon>
     <permissions>

@@ -4,8 +4,13 @@
 
   let extensionSettings;
   let currIdx;
+  let ackVal;
+  let cnxVal;
+  let disableAck;
+  let disableCnx;
 
   $(document).ready(function () {
+    console.log(3);
     tableau.extensions.initializeAsync({ 'configure': configure }).then(function () {
       let settings = tableau.extensions.settings.get('xpanditWritebackSettings');
       extensionSettings = settings ? JSON.parse(settings) : {};
@@ -17,6 +22,10 @@
       } else {
         configure();
       }
+      $('#decoy').click(function() {
+        document.getElementById('cancel_btn').disabled = false;
+        document.getElementById('acknowledge_btn').disabled = false;
+      })
     });
   });
 
@@ -62,21 +71,40 @@
       worksheetData.columns.map(function(col, idx) {
         let ky = col.fieldName;
         let vl = worksheetData.data[0][idx].value;
+        console.log(66, ky, vl);
         if (ky === 'Id') {
           currIdx = vl;
         }
+        if (ky === 'Ack') {
+          ackVal = vl;
+        }
+        if (ky === 'Cnx') {
+          cnxVal = vl;
+        }
       })
+      if (ackVal === 1 && cnxVal === 1 || ackVal === 1 && cnxVal === 0 || ackVal === 0 && cnxVal === 1) {
+        disableAck = true;
+        disableCnx = true;
+      }
+      document.getElementById('cancel_btn').disabled = disableCnx;
+      document.getElementById('acknowledge_btn').disabled = disableAck;
       $('#choose_action').modal('show');
       $('#cancel_btn').click(function() {
+        $('#choose_action').modal('hide');
+        $('#yn_cancel').modal('show');
+      })
+      $('#acknowledge_btn').click(function() {
+        $('#choose_action').modal('hide');
+        $('#yn_ack').modal('show');
+      })
+      $('#cancel_yes').click(function() {
         console.log(123, 'cancel btn clicked');
         let bdy = {
-          id: currIdx,
-          cancel: "Y",
-          action: "cancel"
+          action: "Cnx"
         }
         $.ajax({
           type: 'POST',
-          url: 'http://localhost:8080/products',
+          url: 'http://localhost:8080/action/' + currIdx,
           cors: true ,
           contentType:'application/json',
           headers: {
@@ -87,24 +115,22 @@
           data: bdy,
           success: function (res) {
             console.log('success response in cancel ', res);
-            $('#choose_action').modal('hide');
+            $('#yn_cancel').modal('hide');
           },
           error: function (err) {
             console.log('error response in cancel ', err);
-            $('#choose_action').modal('hide');
+            $('#yn_cancel').modal('hide');
           }
         })
       });
-      $('#acknowledge_btn').click(function() {
+      $('#ack_yes').click(function() {
         console.log(456, 'ack btn clicked');
         let bdy = {
-          id: currIdx,
-          ack: "Y",
-          action: "ack"
+          action: "Ack"
         }
         $.ajax({
           type: 'POST',
-          url: 'http://localhost:8080/products',
+          url: 'http://localhost:8080/action/' + currIdx,
           cors: true ,
           contentType:'application/json',
           headers: {
@@ -144,13 +170,11 @@
         $('#post_action').modal('hide');
         let msg = $('#post_message').val();
         let bdy = {
-          id: currIdx,
-          action: "post",
           histMessage: msg
         }
         $.ajax({
           type: 'POST',
-          url: 'http://localhost:8080/products',
+          url: 'http://localhost:8080/post/'+ currIdx,
           cors: true ,
           contentType:'application/json',
           headers: {

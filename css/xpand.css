@@ -11,7 +11,6 @@
 .xp-btn,.xp-button{border:none;display:inline-block;padding:8px 16px;vertical-align:middle;overflow:hidden;text-decoration:none;color:inherit;background-color:inherit;text-align:center;cursor:pointer;white-space:nowrap}
 .xp-btn,.xp-button{-webkit-touch-callout:none;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}
 .xp-btn-success{background-color:#366092!important;color:#ffffff;margin-left:5px;}
-.xp-btn-warning{background-color:#ffc107!important;color:#ffffff;margin-left:5px;}
 
 .xp-top,.xp-bottom{position:fixed;width:100%;z-index:1}
 .xp-top{top:0;border-bottom: 1px solid rgb(194, 189, 189);}
@@ -21,4 +20,3 @@
 .xp-left{float:left!important}
 .xp-right{float:right!important}
 .xp-padding-16{padding-top:16px!important;padding-bottom:16px!important}
-.xp-hover-black:hover{color:#000!important;background-color:#fff!important}
